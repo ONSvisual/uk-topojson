@@ -29,9 +29,9 @@ npm run make-topo
 
 ## Editing/updating the config
 
-To update geographies for year-on-year mergers of local authorities or terminations of counties, you should only need to edit the **/input/changes.csv** file and .
+To update geographies for year-on-year mergers of local authorities or terminations of counties, you should only need to edit the **/input/changes.csv** file.
 
-If you want to make more complex changes (eg. mergers or terminations of other geographies, or additons of new geography types), you will likely also need to edit the **/input/ltla14_lookup.csv** and/or **/scripts/make-lookup.js** files.
+If you want to make more complex changes (eg. mergers or terminations of other geographies, or additons of new geography types), you will likely also need to edit **/input/ltla14_lookup.csv**, **/scripts/make-lookup.js**, and possibly other files.
 
 ## Other notes
 
