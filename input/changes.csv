@@ -1,0 +1,52 @@
+﻿oldcd,oldnm,newcd,newnm,start
+S12000015,Fife,S12000047,Fife,2018
+S12000024,Perth and Kinross,S12000048,Perth and Kinross,2018
+E06000028,Bournemouth,E06000058,"Bournemouth, Christchurch and Poole",2019
+E06000029,Poole,E06000058,"Bournemouth, Christchurch and Poole",2019
+E07000048,Christchurch,E06000058,"Bournemouth, Christchurch and Poole",2019
+E07000049,East Dorset,E06000059,Dorset,2019
+E07000050,North Dorset,E06000059,Dorset,2019
+E07000051,Purbeck,E06000059,Dorset,2019
+E07000052,West Dorset,E06000059,Dorset,2019
+E07000053,Weymouth and Portland,E06000059,Dorset,2019
+E07000190,Taunton Deane,E07000246,Somerset West and Taunton,2019
+E07000191,West Somerset,E07000246,Somerset West and Taunton,2019
+E07000201,Forest Heath,E07000245,West Suffolk,2019
+E07000204,St Edmundsbury,E07000245,West Suffolk,2019
+E07000205,Suffolk Coastal,E07000244,East Suffolk,2019
+E07000206,Waveney,E07000244,East Suffolk,2019
+E10000009,Dorset,,,2019
+S12000044,North Lanarkshire,S12000050,North Lanarkshire,2019
+S12000046,Glasgow City,S12000049,Glasgow City,2019
+E07000004,Aylesbury Vale,E06000060,Buckinghamshire,2020
+E07000005,Chiltern,E06000060,Buckinghamshire,2020
+E07000006,South Bucks,E06000060,Buckinghamshire,2020
+E07000007,Wycombe,E06000060,Buckinghamshire,2020
+E10000002,Buckinghamshire,,,2020
+E07000150,Corby,E06000061,North Northamptonshire,2021
+E07000151,Daventry,E06000062,West Northamptonshire,2021
+E07000152,East Northamptonshire,E06000061,North Northamptonshire,2021
+E07000153,Kettering,E06000061,North Northamptonshire,2021
+E07000154,Northampton,E06000062,West Northamptonshire,2021
+E07000155,South Northamptonshire,E06000062,West Northamptonshire,2021
+E07000156,Wellingborough,E06000061,North Northamptonshire,2021
+E10000021,Northamptonshire,,,2021
+E07000026,Allerdale,E06000063,Cumberland,2023
+E07000027,Barrow-in-Furness,E06000064,Westmorland and Furness,2023
+E07000028,Carlisle,E06000063,Cumberland,2023
+E07000029,Copeland,E06000063,Cumberland,2023
+E07000030,Eden,E06000064,Westmorland and Furness,2023
+E07000031,South Lakeland,E06000064,Westmorland and Furness,2023
+E07000163,Craven,E06000065,North Yorkshire,2023
+E07000164,Hambleton,E06000065,North Yorkshire,2023
+E07000165,Harrogate,E06000065,North Yorkshire,2023
+E07000166,Richmondshire,E06000065,North Yorkshire,2023
+E07000167,Ryedale,E06000065,North Yorkshire,2023
+E07000168,Scarborough,E06000065,North Yorkshire,2023
+E07000169,Selby,E06000065,North Yorkshire,2023
+E07000187,Mendip,E06000066,Somerset,2023
+E07000188,Sedgemoor,E06000066,Somerset,2023
+E07000189,South Somerset,E06000066,Somerset,2023
+E10000006,Cumbria,,,2023
+E10000023,North Yorkshire,,,2023
+E10000027,Somerset,E06000066,Somerset,2023

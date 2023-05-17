@@ -1,0 +1,20 @@
+{
+  "name": "topojson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-lookup": "node ./scripts/make-lookup.js",
+    "merge-lookup": "node ./scripts/merge-lookup.js",
+    "make-topo-layers": "node ./scripts/make-topo-layers.js",
+    "merge-topo-layers": "node ./scripts/merge-topo-layers.js",
+    "make-topo": "node ./scripts/make-lookup.js && node ./scripts/merge-lookup.js && node ./scripts/make-topo-layers.js && node ./scripts/merge-topo-layers.js"
+  },
+  "author": "Ahmad Barclay",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "d3-dsv": "^3.0.1",
+    "mapshaper": "^0.6.29"
+  }
+}
