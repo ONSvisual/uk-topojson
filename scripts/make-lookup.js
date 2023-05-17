@@ -17,6 +17,7 @@ const years = [14];
 const latest = Math.max(...changes.map(c => c.start)) - 2000;
 for (let i = years[0] + 1; i <= latest; i ++) years.push(i);
 fs.writeFileSync("./output/merge/years.json", JSON.stringify(years));
+fs.writeFileSync("./src/years.js", `export default ${JSON.stringify(years.map(y => y + 2000))};`);
 
 // Generate the lookup
 const lookup = [];

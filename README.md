@@ -1,6 +1,6 @@
 # UK TopoJSON, 2014 - 2023
 
-This repo contains scripts and input files to generate a TopoJSON file covering the following geography layers for the years 2014 to 2023. It also contains the output file at **/output/uk-topo.json**.
+This repo contains scripts and input files to generate a TopoJSON file covering the following geography layers from 2014 up to the present. (You can preview and download individual geographies with [this tool](https://onsvisual.github.io/uk-topojson)).
 
 - **uk** United Kingdom (K02)
 - **ctry** Countries (E92, N92, S92, W92)
@@ -27,6 +27,12 @@ Next, you will need to run the scripts. This can be done with a single command:
 npm run make-topo
 ```
 
+You can preview the output locally by running the included Svelte app:
+
+```bash
+npm run dev
+```
+
 ## Editing/updating the config
 
 To update geographies for year-on-year mergers of local authorities or terminations of counties, you should only need to edit the **/input/changes.csv** file.
@@ -35,7 +41,7 @@ If you want to make more complex changes (eg. mergers or terminations of other g
 
 ## Other notes
 
-- The base geometries used are 2016 super generalised boundaries for lower-tier/unitary local authorities.
+- The base geometries used are [2016 super generalised boundaries](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=name&tags=all(BDY_LAD)%2C2016) for lower-tier/unitary local authorities.
 - There were no changes in UK local authorities from 2014 to 2016, so it is assumed that the boundaries are valid from 2014 onwards.
 - In 2018 and 2019 minor boundary changes were made to four local authority areas in Scotland. The updates to their GSS codes are included, but the boundaries provided here do not change (the changes would not be discernable at a super-generalised level in any case).
 - In 2018, _Shepway_ was renamed _Folkestone and Hythe_ without a change to its GSS code. Only the newer name is used here.
