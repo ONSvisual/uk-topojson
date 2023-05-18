@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { feature, topology } from "topojson";
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
+  import { csvFormat } from "d3-dsv";
 	import bbox from "@turf/bbox";
   import { coordEach } from "@turf/meta";
 	import { geoTypes, countries, path, style } from "./config";
@@ -38,7 +39,14 @@
 
     let output, filename;
 
-    if (mode === "topo") {
+    if (mode === "csv") {
+      output = csvFormat(
+        geo[key].features
+          .map(f => f.properties)
+          .sort((a, b) => a.areacd.localeCompare(b.areacd))
+      );
+      filename = `${key}${year}.csv`;
+    } else if (mode === "topo") {
       output = topology(geo, 1e5);
       filename = `${key}${year}.json`;
     } else {
@@ -50,7 +58,8 @@
       filename = `${key}${year}.geojson`;
     }
 
-    const blob = new Blob([JSON.stringify(output)], {type: 'application/json'});
+    const blob = mode === "csv" ? new Blob([output], {type: "text/csv"}) :
+      new Blob([JSON.stringify(output)], {type: "application/json"});
     const url = window.URL || window.webkitURL || window;
     const link = url.createObjectURL(blob);
     const a = document.createElement("a");
@@ -115,9 +124,11 @@
       <button on:click={() => download("geo")}>
         Download GeoJSON
       </button>
-  
       <button on:click={() => download("topo")}>
         Download TopoJSON
+      </button>
+      <button on:click={() => download("csv")}>
+        Download CSV
       </button>
     </div>
   </nav>
