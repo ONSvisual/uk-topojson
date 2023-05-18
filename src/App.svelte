@@ -4,21 +4,24 @@
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
 	import bbox from "@turf/bbox";
   import { coordEach } from "@turf/meta";
-	import { geoTypes, path, style } from "./config";
+	import { geoTypes, countries, path, style } from "./config";
   import years from "./years";
 	
 	let map = null;
 	let bounds;
 	let hovered;
 	let lookup;
+  let geojson = {};
 	let geoType = geoTypes[0];
 	let year = years[years.length - 1];
-	let geojson = {};
+  let ctrys = [...countries];
 	
-	function filterGeo(geo, year) {
+	function filterGeo(geo, year, ctrys) {
 		let filtered = JSON.parse(JSON.stringify(geo));
+    let codes = ctrys.map(c => c.key);
 		filtered.features = filtered.features.filter(f => {
-			return !(f.properties.end && f.properties.end < year) &&
+			return codes.includes(f.properties.areacd[0]) &&
+        !(f.properties.end && f.properties.end < year) &&
 				!(f.properties.start && f.properties.start > year);
 		}).map(f => {
 			f.properties = f.properties = {areacd: f.properties.areacd, areanm: f.properties.areanm};
@@ -26,11 +29,12 @@
 		});
 		return filtered;
 	}
+  $: filteredGeo = bounds ? filterGeo(geojson[geoType.key], year, ctrys) : null;
 	
 	function download(mode = "topo") {
 		const key = geoType.key;
     const geo = {};
-		geo[key] = filterGeo(geojson[key], year);
+		geo[key] = filteredGeo;
 
     let output, filename;
 
@@ -78,37 +82,50 @@
   <p style:max-width="780px">This tool provides geographic boundaries for the main UK administrative geographies. You can view and download a geography type for a specific year by selecting from the dropdowns below, or you can download all of the geographies in a <a href="./data/topo.json" download="topo.json">single TopoJSON file (600 KB)</a>.</p>
 
   <nav>
-    <label>
-      Geography type<br/>
-      <select bind:value={geoType}>
-        {#each geoTypes as type}
-        <option value={type}>{type.label}</option>
+    <div>
+      <label>
+        Geography type<br/>
+        <select bind:value={geoType}>
+          {#each geoTypes as type}
+          <option value={type}>{type.label}</option>
+          {/each}
+        </select>
+      </label>
+  
+      <label>
+        Year<br/>
+        <select bind:value={year}>
+          {#each years as y}
+          <option value={y}>{y}</option>
+          {/each}
+        </select>
+      </label>
+  
+      <div class="countries">
+        Countries<br/>
+        {#each countries as c}
+        <label>
+          <input type="checkbox" name="countries" value={c} bind:group={ctrys}/>
+          {c.label}
+        </label>
         {/each}
-      </select>
-    </label>
-
-    <label>
-      Year<br/>
-      <select bind:value={year}>
-        {#each years as y}
-        <option value={y}>{y}</option>
-        {/each}
-      </select>
-    </label>
-
-    <button on:click={() => download("geo")}>
-      Download GeoJSON
-    </button>
-
-    <button on:click={() => download("topo")}>
-      Download TopoJSON
-    </button>
+      </div>
+    </div>
+    <div>
+      <button on:click={() => download("geo")}>
+        Download GeoJSON
+      </button>
+  
+      <button on:click={() => download("topo")}>
+        Download TopoJSON
+      </button>
+    </div>
   </nav>
 
-  {#if bounds}
+  {#if filteredGeo}
   <div class="map-container">
     <Map bind:map {style} controls location={{bounds}}>
-      <MapSource id="geo" type="geojson" data={filterGeo(geojson[geoType.key], year)} promoteId="areacd">
+      <MapSource id="geo" type="geojson" data={filteredGeo} promoteId="areacd">
         <MapLayer
           id="geo-fill"
           type="fill"
@@ -144,20 +161,29 @@
   main {
     max-width: 980px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
-  nav {
+  h1 {
+    margin-top: 10px;
+  }
+  nav > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
-    margin-bottom: 10px;
+    align-items: flex-start;
   }
   button, select {
     height: 40px;
     margin: 0 10px 10px 0;
   }
+  input {
+    margin-bottom: 16px;
+  }
   .map-container {
     height: 500px;
+  }
+  .countries > label {
+    display: inline-block;
+    margin-right: 12px;
   }
 </style>
