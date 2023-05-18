@@ -18,7 +18,7 @@
 	
 	function filterGeo(geo, year, ctrys) {
 		let filtered = JSON.parse(JSON.stringify(geo));
-    let codes = ctrys.map(c => c.key);
+    let codes = ["K", ...ctrys.map(c => c.key)];
 		filtered.features = filtered.features.filter(f => {
 			return codes.includes(f.properties.areacd[0]) &&
         !(f.properties.end && f.properties.end < year) &&
