@@ -50,32 +50,36 @@ for (let d of data) {
   };
   for (let yr of years.slice(1)) {
     let y = yr + 2000;
-    let change = chg[current.ltla.cd];
-    // Update codes for merged areas (by year)
-    if (change && change.start === y) {
+    let ltla_change = chg[current.ltla.cd];
+    // Update codes for merged ltlas (by year)
+    if (ltla_change && ltla_change.start === y) {
       row[`ltla${current.ltla.yr}_end`] = y - 1;
-      row[`ltla${yr}cd`] = change.newcd;
-      row[`ltla${yr}nm`] = change.newnm;
+      row[`ltla${yr}cd`] = ltla_change.newcd;
+      row[`ltla${yr}nm`] = ltla_change.newnm;
       row[`ltla${yr}_start`] = y;
       current.ltla = {cd: row[`ltla${yr}cd`], yr};
-      if (row[`ltla${yr}cd`].slice(0, 3) !== "E07") {
-        row[`utla${current.utla.yr}_end`] = y - 1;
-        row[`utla${yr}cd`] = row[`ltla${yr}cd`];
-        row[`utla${yr}nm`] = row[`ltla${yr}nm`];
-        row[`utla${yr}_start`] = y;
-        current.utla = {cd: row[`utla${yr}cd`], yr};
-      }
     }
     // Update codes for terminated counties
-    change = current.cty ? chg[current.cty.cd] : null;
-    if (change && change.start === y) {
+    let cty_change = current.cty ? chg[current.cty.cd] : null;
+    if (cty_change && cty_change.start === y) {
       row[`cty${current.cty.yr}_end`] = y - 1;
-      if (change.newcd) {
-        row[`cty${y}cd`] = change.newcd;
-        row[`cty${y}nm`] = change.newnm;
-        row[`cty${y}_start`] = y;
-        current.cty = {cd: row[`cty${y}cd`], yr};
-      }
+      current.cty = null;
+      // if (cty_change.newcd) {
+      //   row[`cty${yr}cd`] = cty_change.newcd;
+      //   row[`cty${yr}nm`] = cty_change.newnm;
+      //   row[`cty${yr}_start`] = y;
+      //   current.cty = {cd: row[`cty${y}cd`], yr};
+      // }
+    }
+    // Update changed utlas
+    let utla_change = (cty_change && cty_change.start === y) ||
+      (ltla_change && ltla_change.start === y && row[`ltla${yr}cd`].slice(0, 3) !== "E07");
+    if (utla_change) {
+      row[`utla${current.utla.yr}_end`] = y - 1;
+      row[`utla${yr}cd`] = row[`ltla${yr}cd`];
+      row[`utla${yr}nm`] = row[`ltla${yr}nm`];
+      row[`utla${yr}_start`] = y;
+      current.utla = {cd: row[`utla${yr}cd`], yr};
     }
   }
   lookup.push(row);
