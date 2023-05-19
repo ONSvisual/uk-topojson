@@ -5,6 +5,7 @@
   import { csvFormat } from "d3-dsv";
 	import bbox from "@turf/bbox";
   import { coordEach } from "@turf/meta";
+  import { stringify } from "wkt";
 	import { geoTypes, countries, path, style } from "./config";
   import years from "./years";
 	
@@ -39,23 +40,25 @@
 
     let output, filename;
 
-    if (mode === "csv") {
-      output = csvFormat(
-        geo[key].features
-          .map(f => f.properties)
-          .sort((a, b) => a.areacd.localeCompare(b.areacd))
-      );
-      filename = `${key}${year}.csv`;
-    } else if (mode === "topo") {
-      output = topology(geo, 1e5);
-      filename = `${key}${year}.json`;
-    } else {
+    if (mode !== "topo") {
       output = geo[key];
       coordEach(output, c => {
         c[0] = Math.round(c[0] * 1e4) / 1e4;
         c[1] = Math.round(c[1] * 1e4) / 1e4;
       });
-      filename = `${key}${year}.geojson`;
+      if (mode === "csv") {
+        output = csvFormat(
+          output.features
+            .map(f => ({...f.properties, geometry: stringify(f.geometry)}))
+            .sort((a, b) => a.areacd.localeCompare(b.areacd))
+        );
+        filename = `${key}${year}.csv`;
+      } else {
+        filename = `${key}${year}.geojson`;
+      }
+    } else {
+      output = topology(geo, 1e5);
+      filename = `${key}${year}.json`;
     }
 
     const blob = mode === "csv" ? new Blob([output], {type: "text/csv"}) :
@@ -128,7 +131,7 @@
         Download TopoJSON
       </button>
       <button on:click={() => download("csv")}>
-        Download CSV
+        Download CSV/WKT
       </button>
     </div>
   </nav>
