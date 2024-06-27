@@ -10,7 +10,12 @@ const changes = csvParse(
   autoType
 );
 const chg = {};
-changes.forEach(c => chg[c.oldcd] = c);
+const newGeo = {};
+changes.filter(c => c.type !== "new_geo").forEach(c => chg[c.oldcd] = c);
+changes.filter(c => c.type === "new_geo").forEach(c => {
+  if (!newGeo[c.oldcd]) newGeo[c.oldcd] = [];
+  newGeo[c.oldcd].push(c);
+});
 
 // Get the years up to the latest change
 const years = [14];
@@ -46,12 +51,34 @@ for (let d of data) {
   current = {
     ltla: {cd: row.ltla14cd, yr: 14},
     utla: {cd: row.utla14cd, yr: 14},
-    cty: d.ctycd ? {cd: d.ctycd, yr: 14} : null
+    cty: d.ctycd ? {cd: d.ctycd, yr: 14} : null,
+    cauth: d.cauthcd ? {cd: d.cauthcd, yr: 14} : null
   };
   for (let yr of years.slice(1)) {
     let y = yr + 2000;
-    let ltla_change = chg[current.ltla.cd];
+
+    // Create new cauths (by year)
+    let cauth_new_arr = newGeo[current.ltla.cd] || newGeo[current.cty?.cd] || [];
+    let cauth_new = cauth_new_arr.find(c => c.start === y);
+    if (cauth_new) {
+      if (current.cauth) row[`cauth${current.cauth.yr}_end`] = y - 1;
+      row[`cauth${yr}cd`] = cauth_new.newcd;
+      row[`cauth${yr}nm`] = cauth_new.newnm;
+      row[`cauth${yr}_start`] = y;
+      current.cauth = {cd: row[`cauth${yr}cd`], yr};
+    }
+    // Update codes for merged cauths (by year)
+    let cauth_change = chg[current.cauth?.cd];
+    if (cauth_change && cauth_change.start === y) {
+      row[`cauth${current.cauth.yr}_end`] = y - 1;
+      row[`cauth${yr}cd`] = cauth_change.newcd;
+      row[`cauth${yr}nm`] = cauth_change.newnm;
+      row[`cauth${yr}_start`] = y;
+      current.cauth = {cd: row[`cauth${yr}cd`], yr};
+    }
+
     // Update codes for merged ltlas (by year)
+    let ltla_change = chg[current.ltla.cd];
     if (ltla_change && ltla_change.start === y) {
       row[`ltla${current.ltla.yr}_end`] = y - 1;
       row[`ltla${yr}cd`] = ltla_change.newcd;
@@ -81,6 +108,8 @@ for (let d of data) {
       row[`utla${yr}_start`] = y;
       current.utla = {cd: row[`utla${yr}cd`], yr};
     }
+    // Update cauths
+
   }
   lookup.push(row);
 }

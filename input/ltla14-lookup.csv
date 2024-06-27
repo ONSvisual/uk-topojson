@@ -45,7 +45,7 @@ E06000043,Brighton and Hove,,,,,,,E12000008,South East,E92000001,England
 E06000044,Portsmouth,,,,,,,E12000008,South East,E92000001,England
 E06000045,Southampton,,,,,,,E12000008,South East,E92000001,England
 E06000046,Isle of Wight,,,,,,,E12000008,South East,E92000001,England
-E06000047,County Durham,,,,,E47000010,North East,E12000001,North East,E92000001,England
+E06000047,County Durham,,,,,E47000005,North East,E12000001,North East,E92000001,England
 E06000049,Cheshire East,,,,,,,E12000002,North West,E92000001,England
 E06000050,Cheshire West and Chester,,,,,,,E12000002,North West,E92000001,England
 E06000051,Shropshire,,,,,,,E12000005,West Midlands,E92000001,England
@@ -54,7 +54,7 @@ E06000053,Isles of Scilly,,,,,,,E12000009,South West,E92000001,England
 E06000054,Wiltshire,,,,,,,E12000009,South West,E92000001,England
 E06000055,Bedford,,,,,,,E12000006,East of England,E92000001,England
 E06000056,Central Bedfordshire,,,,,,,E12000006,East of England,E92000001,England
-E06000057,Northumberland,,,,,E47000011,North of Tyne,E12000001,North East,E92000001,England
+E06000057,Northumberland,,,,,E47000005,North East,E12000001,North East,E92000001,England
 E07000004,Aylesbury Vale,E10000002,Buckinghamshire,,,,,E12000008,South East,E92000001,England
 E07000005,Chiltern,E10000002,Buckinghamshire,,,,,E12000008,South East,E92000001,England
 E07000006,South Bucks,E10000002,Buckinghamshire,,,,,E12000008,South East,E92000001,England
@@ -275,10 +275,10 @@ E08000016,Barnsley,,,E11000003,South Yorkshire,E47000002,Sheffield City Region,E
 E08000017,Doncaster,,,E11000003,South Yorkshire,E47000002,Sheffield City Region,E12000003,Yorkshire and The Humber,E92000001,England
 E08000018,Rotherham,,,E11000003,South Yorkshire,E47000002,Sheffield City Region,E12000003,Yorkshire and The Humber,E92000001,England
 E08000019,Sheffield,,,E11000003,South Yorkshire,E47000002,Sheffield City Region,E12000003,Yorkshire and The Humber,E92000001,England
-E08000021,Newcastle upon Tyne,,,E11000007,Tyne and Wear,E47000011,North of Tyne,E12000001,North East,E92000001,England
-E08000022,North Tyneside,,,E11000007,Tyne and Wear,E47000011,North of Tyne,E12000001,North East,E92000001,England
-E08000023,South Tyneside,,,E11000007,Tyne and Wear,E47000010,North East,E12000001,North East,E92000001,England
-E08000024,Sunderland,,,E11000007,Tyne and Wear,E47000010,North East,E12000001,North East,E92000001,England
+E08000021,Newcastle upon Tyne,,,E11000007,Tyne and Wear,E47000005,North East,E12000001,North East,E92000001,England
+E08000022,North Tyneside,,,E11000007,Tyne and Wear,E47000005,North East,E12000001,North East,E92000001,England
+E08000023,South Tyneside,,,E11000007,Tyne and Wear,E47000005,North East,E12000001,North East,E92000001,England
+E08000024,Sunderland,,,E11000007,Tyne and Wear,E47000005,North East,E12000001,North East,E92000001,England
 E08000025,Birmingham,,,E11000005,West Midlands,E47000007,West Midlands,E12000005,West Midlands,E92000001,England
 E08000026,Coventry,,,E11000005,West Midlands,E47000007,West Midlands,E12000005,West Midlands,E92000001,England
 E08000027,Dudley,,,E11000005,West Midlands,E47000007,West Midlands,E12000005,West Midlands,E92000001,England
@@ -291,7 +291,7 @@ E08000033,Calderdale,,,E11000006,West Yorkshire,E47000003,West Yorkshire,E120000
 E08000034,Kirklees,,,E11000006,West Yorkshire,E47000003,West Yorkshire,E12000003,Yorkshire and The Humber,E92000001,England
 E08000035,Leeds,,,E11000006,West Yorkshire,E47000003,West Yorkshire,E12000003,Yorkshire and The Humber,E92000001,England
 E08000036,Wakefield,,,E11000006,West Yorkshire,E47000003,West Yorkshire,E12000003,Yorkshire and The Humber,E92000001,England
-E08000037,Gateshead,,,E11000007,Tyne and Wear,E47000010,North East,E12000001,North East,E92000001,England
+E08000037,Gateshead,,,E11000007,Tyne and Wear,E47000005,North East,E12000001,North East,E92000001,England
 E09000001,City of London,,,,,,,E12000007,London,E92000001,England
 E09000002,Barking and Dagenham,,,,,,,E12000007,London,E92000001,England
 E09000003,Barnet,,,,,,,E12000007,London,E92000001,England
