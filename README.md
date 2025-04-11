@@ -1,4 +1,4 @@
-# UK TopoJSON, 2014 - 2024
+# UK TopoJSON, 2014 - 2025
 
 This repo contains scripts and input files to generate a TopoJSON file covering the following geography layers from 2014 up to the present. You can download the [whole TopoJSON file here](https://raw.githubusercontent.com/ONSvisual/uk-topojson/refs/heads/main/output/topo.json), or you can preview and export/download individual geography types in various formats (TopoJSON, GeoJSON or CSV/WKT) [using this tool](https://onsvisual.github.io/uk-topojson).
 
@@ -11,7 +11,7 @@ This repo contains scripts and input files to generate a TopoJSON file covering 
 - **utla** Upper-tier/unitary authorities (E06, E08, E09, E10, N09, S12, W06)
 - **ltla** Lower-tier/unitary authorities (E06, E08, E07, E09, N09, S12, W06)
 
-The output file contains layers for each of the above geography types. Each area has **areacd** (GSS code) and **areanm** (official name) attributes. Areas that were created or terminated between 2014 and 2024 include a **start** and/or **end** attribute which allow them to be filtered by year.
+The output file contains layers for each of the above geography types. Each area has **areacd** (GSS code) and **areanm** (official name) attributes. Areas that were created or terminated between 2014 and 2025 include a **start** and/or **end** attribute which allow them to be filtered by year.
 
 ## Running the scripts
 
