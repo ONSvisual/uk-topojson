@@ -21,6 +21,7 @@ changes.filter(c => c.type === "new_geo").forEach(c => {
 const years = [14];
 const latest = Math.max(...changes.map(c => c.start)) - 2000;
 for (let i = years[0] + 1; i <= latest; i ++) years.push(i);
+fs.mkdirSync("./output/merge", {recursive: true});
 fs.writeFileSync("./output/merge/years.json", JSON.stringify(years));
 fs.writeFileSync("./src/years.js", `export default ${JSON.stringify(years.map(y => y + 2000))};`);
 
