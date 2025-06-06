@@ -1,70 +1,80 @@
-﻿oldcd,oldnm,newcd,newnm,type,start,,
-E06000057,Northumberland,E47000011,North of Tyne,new_geo,2018,,
-E08000021,Newcastle upon Tyne,E47000011,North of Tyne,new_geo,2018,,
-E08000022,North Tyneside,E47000011,North of Tyne,new_geo,2018,,
-E06000047,County Durham,E47000010,North East,new_geo,2018,,
-E08000023,South Tyneside,E47000010,North East,new_geo,2018,,
-E08000024,Sunderland,E47000010,North East,new_geo,2018,,
-E08000037,Gateshead,E47000010,North East,new_geo,2018,,
-S12000015,Fife,S12000047,Fife,new_code,2018,,
-S12000024,Perth and Kinross,S12000048,Perth and Kinross,new_code,2018,,
-E06000028,Bournemouth,E06000058,"Bournemouth, Christchurch and Poole",merger,2019,,
-E06000029,Poole,E06000058,"Bournemouth, Christchurch and Poole",merger,2019,,
-E07000048,Christchurch,E06000058,"Bournemouth, Christchurch and Poole",merger,2019,,
-E07000049,East Dorset,E06000059,Dorset,merger,2019,,
-E07000050,North Dorset,E06000059,Dorset,merger,2019,,
-E07000051,Purbeck,E06000059,Dorset,merger,2019,,
-E07000052,West Dorset,E06000059,Dorset,merger,2019,,
-E07000053,Weymouth and Portland,E06000059,Dorset,merger,2019,,
-E07000190,Taunton Deane,E07000246,Somerset West and Taunton,merger,2019,,
-E07000191,West Somerset,E07000246,Somerset West and Taunton,merger,2019,,
-E07000201,Forest Heath,E07000245,West Suffolk,merger,2019,,
-E07000204,St Edmundsbury,E07000245,West Suffolk,merger,2019,,
-E07000205,Suffolk Coastal,E07000244,East Suffolk,merger,2019,,
-E07000206,Waveney,E07000244,East Suffolk,merger,2019,,
-E10000009,Dorset,,,termination,2019,,
-S12000044,North Lanarkshire,S12000050,North Lanarkshire,merger,2019,,
-S12000046,Glasgow City,S12000049,Glasgow City,merger,2019,,
-E07000004,Aylesbury Vale,E06000060,Buckinghamshire,merger,2020,,
-E07000005,Chiltern,E06000060,Buckinghamshire,merger,2020,,
-E07000006,South Bucks,E06000060,Buckinghamshire,merger,2020,,
-E07000007,Wycombe,E06000060,Buckinghamshire,merger,2020,,
-E10000002,Buckinghamshire,,,termination,2020,,
-E07000150,Corby,E06000061,North Northamptonshire,merger,2021,,
-E07000151,Daventry,E06000062,West Northamptonshire,merger,2021,,
-E07000152,East Northamptonshire,E06000061,North Northamptonshire,merger,2021,,
-E07000153,Kettering,E06000061,North Northamptonshire,merger,2021,,
-E07000154,Northampton,E06000062,West Northamptonshire,merger,2021,,
-E07000155,South Northamptonshire,E06000062,West Northamptonshire,merger,2021,,
-E07000156,Wellingborough,E06000061,North Northamptonshire,merger,2021,,
-E10000021,Northamptonshire,,,termination,2021,,
-E07000026,Allerdale,E06000063,Cumberland,merger,2023,,
-E07000027,Barrow-in-Furness,E06000064,Westmorland and Furness,merger,2023,,
-E07000028,Carlisle,E06000063,Cumberland,merger,2023,,
-E07000029,Copeland,E06000063,Cumberland,merger,2023,,
-E07000030,Eden,E06000064,Westmorland and Furness,merger,2023,,
-E07000031,South Lakeland,E06000064,Westmorland and Furness,merger,2023,,
-E07000163,Craven,E06000065,North Yorkshire,merger,2023,,
-E07000164,Hambleton,E06000065,North Yorkshire,merger,2023,,
-E07000165,Harrogate,E06000065,North Yorkshire,merger,2023,,
-E07000166,Richmondshire,E06000065,North Yorkshire,merger,2023,,
-E07000167,Ryedale,E06000065,North Yorkshire,merger,2023,,
-E07000168,Scarborough,E06000065,North Yorkshire,merger,2023,,
-E07000169,Selby,E06000065,North Yorkshire,merger,2023,,
-E07000187,Mendip,E06000066,Somerset,merger,2023,,
-E07000188,Sedgemoor,E06000066,Somerset,merger,2023,,
-E07000189,South Somerset,E06000066,Somerset,merger,2023,,
-E07000246,Somerset West and Taunton,E06000066,Somerset,merger,2023,,
-E10000006,Cumbria,,,termination,2023,,
-E10000023,North Yorkshire,,,termination,2023,,
-E10000027,Somerset,,,termination,2023,,
-E06000014,York,E47000012,York and North Yorkshire,new_geo,2024,,
-E06000065,North Yorkshire,E47000012,York and North Yorkshire,new_geo,2024,,
-E06000015,Derby,E47000013,East Midlands,new_geo,2024,,
-E06000018,Nottingham,E47000013,East Midlands,new_geo,2024,,
-E10000007,Derbyshire,E47000013,East Midlands,new_geo,2024,,
-E10000024,Nottinghamshire,E47000013,East Midlands,new_geo,2024,,
-E47000010,North East,E47000014,North East,merger,2024,,
-E47000011,North of Tyne,E47000014,North East,merger,2024,,
-E08000016,Barnsley,E08000038,Barnsley,new_code,2025,,
-E08000019,Sheffield,E08000039,Sheffield,new_code,2025,,
+﻿oldcd,oldnm,newcd,newnm,type,start
+E06000057,Northumberland,E47000011,North of Tyne,new_geo,2018
+E08000021,Newcastle upon Tyne,E47000011,North of Tyne,new_geo,2018
+E08000022,North Tyneside,E47000011,North of Tyne,new_geo,2018
+E06000047,County Durham,E47000010,North East,new_geo,2018
+E08000023,South Tyneside,E47000010,North East,new_geo,2018
+E08000024,Sunderland,E47000010,North East,new_geo,2018
+E08000037,Gateshead,E47000010,North East,new_geo,2018
+S12000015,Fife,S12000047,Fife,new_code,2018
+S12000024,Perth and Kinross,S12000048,Perth and Kinross,new_code,2018
+E06000028,Bournemouth,E06000058,"Bournemouth, Christchurch and Poole",merger,2019
+E06000029,Poole,E06000058,"Bournemouth, Christchurch and Poole",merger,2019
+E07000048,Christchurch,E06000058,"Bournemouth, Christchurch and Poole",merger,2019
+E07000049,East Dorset,E06000059,Dorset,merger,2019
+E07000050,North Dorset,E06000059,Dorset,merger,2019
+E07000051,Purbeck,E06000059,Dorset,merger,2019
+E07000052,West Dorset,E06000059,Dorset,merger,2019
+E07000053,Weymouth and Portland,E06000059,Dorset,merger,2019
+E07000190,Taunton Deane,E07000246,Somerset West and Taunton,merger,2019
+E07000191,West Somerset,E07000246,Somerset West and Taunton,merger,2019
+E07000201,Forest Heath,E07000245,West Suffolk,merger,2019
+E07000204,St Edmundsbury,E07000245,West Suffolk,merger,2019
+E07000205,Suffolk Coastal,E07000244,East Suffolk,merger,2019
+E07000206,Waveney,E07000244,East Suffolk,merger,2019
+E10000009,Dorset,,,termination,2019
+S12000044,North Lanarkshire,S12000050,North Lanarkshire,new_geo,2019
+S12000046,Glasgow City,S12000049,Glasgow City,new_geo,2019
+E07000004,Aylesbury Vale,E06000060,Buckinghamshire,merger,2020
+E07000005,Chiltern,E06000060,Buckinghamshire,merger,2020
+E07000006,South Bucks,E06000060,Buckinghamshire,merger,2020
+E07000007,Wycombe,E06000060,Buckinghamshire,merger,2020
+E10000002,Buckinghamshire,,,termination,2020
+E07000150,Corby,E06000061,North Northamptonshire,merger,2021
+E07000151,Daventry,E06000062,West Northamptonshire,merger,2021
+E07000152,East Northamptonshire,E06000061,North Northamptonshire,merger,2021
+E07000153,Kettering,E06000061,North Northamptonshire,merger,2021
+E07000154,Northampton,E06000062,West Northamptonshire,merger,2021
+E07000155,South Northamptonshire,E06000062,West Northamptonshire,merger,2021
+E07000156,Wellingborough,E06000061,North Northamptonshire,merger,2021
+E10000021,Northamptonshire,,,termination,2021
+E07000026,Allerdale,E06000063,Cumberland,merger,2023
+E07000027,Barrow-in-Furness,E06000064,Westmorland and Furness,merger,2023
+E07000028,Carlisle,E06000063,Cumberland,merger,2023
+E07000029,Copeland,E06000063,Cumberland,merger,2023
+E07000030,Eden,E06000064,Westmorland and Furness,merger,2023
+E07000031,South Lakeland,E06000064,Westmorland and Furness,merger,2023
+E07000163,Craven,E06000065,North Yorkshire,merger,2023
+E07000164,Hambleton,E06000065,North Yorkshire,merger,2023
+E07000165,Harrogate,E06000065,North Yorkshire,merger,2023
+E07000166,Richmondshire,E06000065,North Yorkshire,merger,2023
+E07000167,Ryedale,E06000065,North Yorkshire,merger,2023
+E07000168,Scarborough,E06000065,North Yorkshire,merger,2023
+E07000169,Selby,E06000065,North Yorkshire,merger,2023
+E07000187,Mendip,E06000066,Somerset,merger,2023
+E07000188,Sedgemoor,E06000066,Somerset,merger,2023
+E07000189,South Somerset,E06000066,Somerset,merger,2023
+E07000246,Somerset West and Taunton,E06000066,Somerset,merger,2023
+E10000006,Cumbria,,,termination,2023
+E10000023,North Yorkshire,,,termination,2023
+E10000027,Somerset,,,termination,2023
+E06000014,York,E47000012,York and North Yorkshire,new_geo,2024
+E06000065,North Yorkshire,E47000012,York and North Yorkshire,new_geo,2024
+E06000015,Derby,E47000013,East Midlands,new_geo,2024
+E06000018,Nottingham,E47000013,East Midlands,new_geo,2024
+E10000007,Derbyshire,E47000013,East Midlands,new_geo,2024
+E10000024,Nottinghamshire,E47000013,East Midlands,new_geo,2024
+E47000010,North East,E47000014,North East,merger,2024
+E47000011,North of Tyne,E47000014,North East,merger,2024
+E08000016,Barnsley,E08000038,Barnsley,new_code,2025
+E08000019,Sheffield,E08000039,Sheffield,new_code,2025
+E10000008,Devon,E47000015,Devon and Torbay,new_geo,2025
+E06000027,Torbay,E47000015,Devon and Torbay,new_geo,2025
+E06000010,"Kingston upon Hull, City of",E47000016,Hull and East Yorkshire,new_geo,2025
+E06000011,East Riding of Yorkshire,E47000016,Hull and East Yorkshire,new_geo,2025
+E10000019,Lincolnshire,E47000017,Greater Lincolnshire,new_geo,2025
+E06000012,North East Lincolnshire,E47000017,Greater Lincolnshire,new_geo,2025
+E06000013,North Lincolnshire,E47000017,Greater Lincolnshire,new_geo,2025
+E10000017,Lancashire,E47000018,Lancashire,new_geo,2025
+E06000008,Blackburn with Darwen,E47000018,Lancashire,new_geo,2025
+E06000009,Blackpool,E47000018,Lancashire,new_geo,2025
